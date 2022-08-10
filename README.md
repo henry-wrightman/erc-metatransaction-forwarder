@@ -14,3 +14,19 @@ Meta-transactions provide various advantages for a web3 ecosystem, including gas
 2. `npm run test:waffle`
 
 (see `/test/Forwarder.test.js` for how a signed transaction is constructed)
+```
+const constructMetaTransfer = async (to, amount, recipientContract, signer) => { 
+  const iface = new utils.Interface(['function transfer(address,uint256)'])
+  const data = iface.encodeFunctionData('transfer', [to, amount])
+
+  const hash = ethers.utils.keccak256(
+    ethers.utils.defaultAbiCoder.encode(
+    ['address','bytes'],
+    [recipientContract,data]
+    )
+  )
+
+  const signature = await signer.signMessage(utils.arrayify(hash));
+  return { data, signature };
+}
+```

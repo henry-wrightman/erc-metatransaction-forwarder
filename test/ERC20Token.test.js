@@ -11,7 +11,7 @@ describe('ERC20Token', () => {
 
   beforeEach(async () => {
     const token = await ethers.getContractFactory("ERC20Token");
-    tokenContract = await token.deploy(); // only argument is potential lock proxy address for bridging
+    tokenContract = await token.deploy();
     await tokenContract.deployed();
     [owner] = await ethers.getSigners();
   });

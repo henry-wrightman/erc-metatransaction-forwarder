@@ -5,7 +5,7 @@ Meta-transactions provide various advantages for a web3 ecosystem, including gas
 
 ### features ###
 - nonce collision detection for replay protection (may not be necessary depending on your impl)
-- batching for gas efficiency
+- batching for gas efficiency/ higher volume
 - whitelisting for both relayers (e.g hotwallet, or Infura), as well as signers (original senders); either can be toggled on/off
 - fee (for relayer gas fee) to be paid in either native ERC20 token, or ETH
 

@@ -11,7 +11,7 @@ Meta-transactions provide various advantages for a web3 ecosystem, including gas
 
 ### tests ###
 1. `yarn` (for dependencies)
-2. `npm run test:waffle`
+2. `yarn test:waffle`
 
 (see `/test/Forwarder.test.js` for how a signed transaction is constructed)
 ```
